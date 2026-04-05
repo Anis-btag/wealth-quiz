@@ -19,50 +19,50 @@ const QUESTIONS = [
     q:    'You just received an unexpected $1,000 bonus. What do you do?',
     tag:  'Money habits',
     answers: [
-      { emoji: '🛍️', title: 'Spend it all',        hint: 'Retail therapy, here I come',  },
-      { emoji: '🏦', title: 'Put it in savings',    hint: 'Safe in the bank, untouched', },
-      { emoji: '⚖️', title: 'Invest half, save half', hint: 'Balanced deployment',       },
-      { emoji: '📈', title: 'Invest it fully',      hint: 'Index fund or stocks',    }
+      { emoji: '🛍️', title: 'Spend it all',          hint: 'Retail therapy, here I come',        score: 0, label: 'Poor'  },
+      { emoji: '🏦', title: 'Put it in savings',      hint: 'Safe in the bank, untouched',        score: 1, label: 'Okay'  },
+      { emoji: '⚖️', title: 'Invest half, save half', hint: 'Balanced deployment',                score: 2, label: 'Good'  },
+      { emoji: '📈', title: 'Invest it fully',        hint: 'Index fund or stocks',               score: 3, label: 'Smart' }
     ]
   },
   {
     q:    'You have a free weekend with zero plans. What actually happens?',
     tag:  'Daily habits',
     answers: [
-      { emoji: '📺', title: 'Binge shows all weekend', hint: 'Full couch mode, zero guilt', },
-      { emoji: '🎮', title: 'Gaming or hobbies',       hint: 'Fun but not productive',      },
-      { emoji: '🔨', title: 'Work on a side project',  hint: 'Building something real',       },
-      { emoji: '📚', title: 'Learn a valuable skill',  hint: 'Course, book, or deep practice', }
+      { emoji: '📺', title: 'Binge shows all weekend', hint: 'Full couch mode, zero guilt',       score: 0, label: 'Poor'  },
+      { emoji: '🎮', title: 'Gaming or hobbies',       hint: 'Fun but not productive',            score: 1, label: 'Okay'  },
+      { emoji: '🔨', title: 'Work on a side project',  hint: 'Building something real',           score: 2, label: 'Good'  },
+      { emoji: '📚', title: 'Learn a valuable skill',  hint: 'Course, book, or deep practice',   score: 3, label: 'Smart' }
     ]
   },
   {
     q:    'A mentor tells you: "You\'re leaving money on the table." You...',
     tag:  'Career vision',
     answers: [
-      { emoji: '🙄', title: 'Ignore it — I\'m comfortable', hint: 'My salary is enough for me',   },
-      { emoji: '🤔', title: 'Think about it, do nothing',   hint: 'Interesting but too risky',   },
-      { emoji: '💡', title: 'Ask them what they mean',      hint: 'Start exploring your options', },
-      { emoji: '🚀', title: 'Build a plan immediately',     hint: 'Action over hesitation',   }
+      { emoji: '🙄', title: 'Ignore it — I\'m comfortable', hint: 'My salary is enough for me',  score: 0, label: 'Poor'  },
+      { emoji: '🤔', title: 'Think about it, do nothing',   hint: 'Interesting but too risky',   score: 1, label: 'Okay'  },
+      { emoji: '💡', title: 'Ask them what they mean',      hint: 'Start exploring your options', score: 2, label: 'Good'  },
+      { emoji: '🚀', title: 'Build a plan immediately',     hint: 'Action over hesitation',       score: 3, label: 'Smart' }
     ]
   },
   {
     q:    'A business idea you spent 3 months on completely flops. You...',
     tag:  'Resilience',
     answers: [
-      { emoji: '😔', title: 'Give up on entrepreneurship', hint: 'It wasn\'t meant to be',   },
-      { emoji: '😤', title: 'Take a long break from it',   hint: 'Need time away from it all',   },
-      { emoji: '🔍', title: 'Analyse then restart',        hint: 'Deep post-mortem, then retry',  },
-      { emoji: '🔁', title: 'Pivot immediately',           hint: 'Failure = market feedback',   }
+      { emoji: '😔', title: 'Give up on entrepreneurship', hint: 'It wasn\'t meant to be',       score: 0, label: 'Poor'  },
+      { emoji: '😤', title: 'Take a long break from it',   hint: 'Need time away from it all',   score: 1, label: 'Okay'  },
+      { emoji: '🔍', title: 'Analyse then restart',        hint: 'Deep post-mortem, then retry', score: 2, label: 'Good'  },
+      { emoji: '🔁', title: 'Pivot immediately',           hint: 'Failure = market feedback',    score: 3, label: 'Smart' }
     ]
   },
   {
     q:    'You find out a colleague earns 30% more for the same role. You...',
     tag:  'Wealth mindset',
     answers: [
-      { emoji: '😡', title: 'Complain but stay put',    hint: 'Life\'s unfair, whatever',    },
-      { emoji: '😶', title: 'Say nothing and accept it', hint: 'Don\'t want to rock the boat',  },
-      { emoji: '💬', title: 'Negotiate your salary',    hint: 'Have the uncomfortable talk',     },
-      { emoji: '⚙️', title: 'Negotiate + build leverage', hint: 'Side income makes you untouchable', }
+      { emoji: '😡', title: 'Complain but stay put',       hint: 'Life\'s unfair, whatever',            score: 0, label: 'Poor'  },
+      { emoji: '😶', title: 'Say nothing and accept it',   hint: 'Don\'t want to rock the boat',        score: 1, label: 'Okay'  },
+      { emoji: '💬', title: 'Negotiate your salary',       hint: 'Have the uncomfortable talk',          score: 2, label: 'Good'  },
+      { emoji: '⚙️', title: 'Negotiate + build leverage',  hint: 'Side income makes you untouchable',   score: 3, label: 'Smart' }
     ]
   }
 ];
