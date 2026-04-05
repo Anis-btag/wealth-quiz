@@ -19,74 +19,82 @@ const QUESTIONS = [
     q:    'You just received an unexpected $1,000 bonus. What do you do?',
     tag:  'Money habits',
     answers: [
-      { emoji: '🛍️', title: 'Spend it all',        hint: 'Retail therapy, here I come',      score: 0, label: 'Poor'  },
-      { emoji: '🏦', title: 'Put it in savings',    hint: 'Safe in the bank, untouched',      score: 1, label: 'Okay'  },
-      { emoji: '⚖️', title: 'Invest half, save half', hint: 'Balanced deployment',            score: 2, label: 'Good'  },
-      { emoji: '📈', title: 'Invest it fully',      hint: 'Index fund or stocks',             score: 3, label: 'Smart' }
+      { emoji: '🛍️', title: 'Spend it all',        hint: 'Retail therapy, here I come',  },
+      { emoji: '🏦', title: 'Put it in savings',    hint: 'Safe in the bank, untouched', },
+      { emoji: '⚖️', title: 'Invest half, save half', hint: 'Balanced deployment',       },
+      { emoji: '📈', title: 'Invest it fully',      hint: 'Index fund or stocks',    }
     ]
   },
   {
     q:    'You have a free weekend with zero plans. What actually happens?',
     tag:  'Daily habits',
     answers: [
-      { emoji: '📺', title: 'Binge shows all weekend', hint: 'Full couch mode, zero guilt',    score: 0, label: 'Poor'  },
-      { emoji: '🎮', title: 'Gaming or hobbies',       hint: 'Fun but not productive',         score: 1, label: 'Okay'  },
-      { emoji: '🔨', title: 'Work on a side project',  hint: 'Building something real',        score: 2, label: 'Good'  },
-      { emoji: '📚', title: 'Learn a valuable skill',  hint: 'Course, book, or deep practice', score: 3, label: 'Smart' }
+      { emoji: '📺', title: 'Binge shows all weekend', hint: 'Full couch mode, zero guilt', },
+      { emoji: '🎮', title: 'Gaming or hobbies',       hint: 'Fun but not productive',      },
+      { emoji: '🔨', title: 'Work on a side project',  hint: 'Building something real',       },
+      { emoji: '📚', title: 'Learn a valuable skill',  hint: 'Course, book, or deep practice', }
     ]
   },
   {
     q:    'A mentor tells you: "You\'re leaving money on the table." You...',
     tag:  'Career vision',
     answers: [
-      { emoji: '🙄', title: 'Ignore it — I\'m comfortable', hint: 'My salary is enough for me',  score: 0, label: 'Poor'  },
-      { emoji: '🤔', title: 'Think about it, do nothing',   hint: 'Interesting but too risky',   score: 1, label: 'Okay'  },
-      { emoji: '💡', title: 'Ask them what they mean',      hint: 'Start exploring your options', score: 2, label: 'Good'  },
-      { emoji: '🚀', title: 'Build a plan immediately',     hint: 'Action over hesitation',       score: 3, label: 'Smart' }
+      { emoji: '🙄', title: 'Ignore it — I\'m comfortable', hint: 'My salary is enough for me',   },
+      { emoji: '🤔', title: 'Think about it, do nothing',   hint: 'Interesting but too risky',   },
+      { emoji: '💡', title: 'Ask them what they mean',      hint: 'Start exploring your options', },
+      { emoji: '🚀', title: 'Build a plan immediately',     hint: 'Action over hesitation',   }
     ]
   },
   {
     q:    'A business idea you spent 3 months on completely flops. You...',
     tag:  'Resilience',
     answers: [
-      { emoji: '😔', title: 'Give up on entrepreneurship', hint: 'It wasn\'t meant to be',      score: 0, label: 'Poor'  },
-      { emoji: '😤', title: 'Take a long break from it',   hint: 'Need time away from it all',  score: 1, label: 'Okay'  },
-      { emoji: '🔍', title: 'Analyse then restart',        hint: 'Deep post-mortem, then retry', score: 2, label: 'Good'  },
-      { emoji: '🔁', title: 'Pivot immediately',           hint: 'Failure = market feedback',    score: 3, label: 'Smart' }
+      { emoji: '😔', title: 'Give up on entrepreneurship', hint: 'It wasn\'t meant to be',   },
+      { emoji: '😤', title: 'Take a long break from it',   hint: 'Need time away from it all',   },
+      { emoji: '🔍', title: 'Analyse then restart',        hint: 'Deep post-mortem, then retry',  },
+      { emoji: '🔁', title: 'Pivot immediately',           hint: 'Failure = market feedback',   }
     ]
   },
   {
     q:    'You find out a colleague earns 30% more for the same role. You...',
     tag:  'Wealth mindset',
     answers: [
-      { emoji: '😡', title: 'Complain but stay put',    hint: 'Life\'s unfair, whatever',            score: 0, label: 'Poor'  },
-      { emoji: '😶', title: 'Say nothing and accept it', hint: 'Don\'t want to rock the boat',       score: 1, label: 'Okay'  },
-      { emoji: '💬', title: 'Negotiate your salary',    hint: 'Have the uncomfortable talk',          score: 2, label: 'Good'  },
-      { emoji: '⚙️', title: 'Negotiate + build leverage', hint: 'Side income makes you untouchable', score: 3, label: 'Smart' }
+      { emoji: '😡', title: 'Complain but stay put',    hint: 'Life\'s unfair, whatever',    },
+      { emoji: '😶', title: 'Say nothing and accept it', hint: 'Don\'t want to rock the boat',  },
+      { emoji: '💬', title: 'Negotiate your salary',    hint: 'Have the uncomfortable talk',     },
+      { emoji: '⚙️', title: 'Negotiate + build leverage', hint: 'Side income makes you untouchable', }
     ]
   }
 ];
 
 /* ── Tier definitions ───────────────────────────────────────── */
 function getTier(pct) {
-  if (pct <= 33) return {
-    label: 'Employee',
-    full:  'Employee mindset',
+  if (pct <= 25) return {
+    label: 'NPC',
+    full:  'NPC mindset',
     color: '#DC2626',
     bg:    '#FEE2E2',
     tc:    '#7F1D1D',
-    desc:  'You lean toward comfort and security — but it\'s costing you compound growth. Small mindset shifts around risk and action will change your trajectory.'
+    desc:  "You're living on autopilot. Money comes in, money goes out, and you never ask why. The system was designed for people who think exactly like you do — and it's working against you. Wake up."
   };
-  if (pct <= 66) return {
-    label: 'Balanced',
-    full:  'Balanced mindset',
+  if (pct <= 50) return {
+    label: 'Employee',
+    full:  'Employee mindset',
     color: '#D97706',
+    bg:    '#FEF3C7',
+    tc:    '#78350F',
+    desc:  "You're aware something needs to change but you're not moving fast enough. You talk about it more than you do it. The gap between where you are and where you want to be is made of excuses. Time to close it."
+  };
+    if (pct <= 70) return {
+    label: 'Hustler',
+    full:  'Hustler mindset',
+    color: '#532f05',
     bg:    '#FEF3C7',
     tc:    '#78350F',
     desc:  'You have the right instincts but aren\'t acting fast enough. You understand the game — now play it more aggressively. Execution is your missing piece.'
   };
   return {
-    label: 'Wealth',
+    label: 'Rich dad himself',
     full:  'Wealth mindset',
     color: '#0EA875',
     bg:    '#D6F5EB',
