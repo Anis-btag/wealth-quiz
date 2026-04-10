@@ -287,8 +287,8 @@ function showNameScreen() {
       </div>
       <div class="ns-title">Wealth Mindset Quiz</div>
       <div class="ns-sub">
-        5 real questions that reveal how you think about money, risk, and growth.
-        You have <strong>3 minutes</strong>.
+        8 real questions that reveal how you think about money, risk, and growth.
+        You have <strong>2 minutes</strong>.
       </div>
 
       <div class="ns-features">
