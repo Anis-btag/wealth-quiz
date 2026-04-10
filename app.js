@@ -294,11 +294,11 @@ function showNameScreen() {
       <div class="ns-features">
         <div class="ns-feat">
           <div class="feat-dot" style="background: var(--p)"></div>
-          <span class="feat-txt">5 questions</span>
+          <span class="feat-txt">8 questions</span>
         </div>
         <div class="ns-feat">
           <div class="feat-dot" style="background: var(--teal)"></div>
-          <span class="feat-txt">3 min timer</span>
+          <span class="feat-txt">2 min timer</span>
         </div>
         <div class="ns-feat">
           <div class="feat-dot" style="background: var(--amber)"></div>
