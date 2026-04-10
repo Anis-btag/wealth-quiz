@@ -3,8 +3,8 @@
    ============================================================= */
 
 /* ── Constants ─────────────────────────────────────────────── */
-const TIMER_SECONDS = 180;   // 3 minutes
-const MAX_SCORE     = 15;    // 5 questions × 3 points each
+const TIMER_SECONDS = 120;   // 3 minutes
+const MAX_SCORE     = 24;    // 8 questions × 3 points each
 const LOCAL_KEY     = 'wqLocalLB_v1';
 
 /* ── Questions & Answers ────────────────────────────────────
@@ -65,6 +65,37 @@ const QUESTIONS = [
       { emoji: '⚙️', title: 'Negotiate + build leverage',  hint: 'Side income makes you untouchable',   score: 3, label: 'Smart' }
     ]
   }
+   {
+  q:    'You’re about to make a big purchase (phone, car, etc.). What do you do?',
+  tag:  'Spending decisions',
+  answers: [
+    { emoji: '🛍️', title: 'Buy it instantly',        hint: 'If I want it, I get it',            score: 0, label: 'Poor'  },
+    { emoji: '💸', title: 'Check price quickly',     hint: 'Just making sure it’s fair',       score: 1, label: 'Okay'  },
+    { emoji: '🔎', title: 'Compare options',         hint: 'Research before buying',           score: 2, label: 'Good'  },
+    { emoji: '🧠', title: 'Delay & evaluate need',   hint: 'Avoid impulsive spending',         score: 3, label: 'Smart' }
+  ]
+},
+{
+  q:    'You have an extra 2 hours every day. How do you use it?',
+  tag:  'Time management',
+  answers: [
+    { emoji: '📱', title: 'Scroll social media',         hint: 'Time disappears quickly',             score: 0, label: 'Poor'  },
+    { emoji: '😌', title: 'Relax and rest',              hint: 'Recharge your energy',                score: 1, label: 'Okay'  },
+    { emoji: '🏃', title: 'Exercise or self-care',       hint: 'Improve physical/mental health',      score: 2, label: 'Good'  },
+    { emoji: '🧠', title: 'Learn & build income skills', hint: 'Invest in your future',              score: 3, label: 'Smart' }
+  ]
+},
+{
+  q:    'You’re offered a risky opportunity with high potential reward. You…',
+  tag:  'Risk mindset',
+  answers: [
+    { emoji: '🚫', title: 'Avoid it completely',         hint: 'Too risky for me',                    score: 0, label: 'Poor'  },
+    { emoji: '⚖️', title: 'Consider but decline',        hint: 'Not comfortable with uncertainty',   score: 1, label: 'Okay'  },
+    { emoji: '🔎', title: 'Research before deciding',    hint: 'Calculated risk only',               score: 2, label: 'Good'  },
+    { emoji: '🔥', title: 'Take the opportunity fast',   hint: 'High risk, high reward mindset',     score: 3, label: 'Smart' }
+  ]
+}
+
 ];
 
 /* ── Tier definitions ───────────────────────────────────────── */
