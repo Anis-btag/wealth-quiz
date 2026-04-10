@@ -64,7 +64,7 @@ const QUESTIONS = [
       { emoji: '💬', title: 'Negotiate your salary',       hint: 'Have the uncomfortable talk',          score: 2, label: 'Good'  },
       { emoji: '⚙️', title: 'Negotiate + build leverage',  hint: 'Side income makes you untouchable',   score: 3, label: 'Smart' }
     ]
-  }
+  },
    {
   q:    'You’re about to make a big purchase (phone, car, etc.). What do you do?',
   tag:  'Spending decisions',
