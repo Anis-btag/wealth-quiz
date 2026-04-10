@@ -340,9 +340,25 @@ function showNameScreen() {
 }
 
 function onNameInput() {
+  const badWords = ["shit","fuck","bitch","ass","nigga","nigger"];
+
   const val = document.getElementById('name-inp').value.trim();
   const btn = document.getElementById('start-btn');
-  if (btn) btn.disabled = val.length < 2;
+  const msg = document.getElementById('error-msg');
+
+  const hasBadWord = badWords.some(word =>
+    new RegExp(`\\b${word}\\b`, "i").test(val)
+  );
+
+  if (btn) {
+    btn.disabled = val.length < 2 || hasBadWord;
+  }
+
+  if (msg) {
+    msg.textContent = hasBadWord
+      ? "Please enter an appropriate name"
+      : "";
+  }
 }
 
 function beginQuiz() {
