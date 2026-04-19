@@ -97,7 +97,60 @@ const QUESTIONS = [
 }
 
 ];
+/* ── Navbar navigation ──────────────────────────────────────── */
+function setNavActive(view) {
+  const lbBtn   = document.getElementById('nav-lb-btn');
+  const quizBtn = document.getElementById('nav-quiz-btn');
+  if (lbBtn)   lbBtn.classList.toggle('active',   view === 'lb');
+  if (quizBtn) quizBtn.classList.toggle('active',  view === 'quiz');
+}
 
+function navGoLeaderboard() {
+  setNavActive('lb');
+  showStandaloneLeaderboard();
+}
+
+function navGoQuiz() {
+  setNavActive('quiz');
+  stopTimer();
+  showNameScreen();
+}
+
+async function showStandaloneLeaderboard() {
+  document.getElementById('main').innerHTML = `
+    <div class="lb-section">
+      <div class="lb-title">
+        <div class="lb-icon">
+          <svg viewBox="0 0 12 12" fill="none" width="12" height="12">
+            <rect x="1"    y="5" width="2.5" height="6" rx="1" fill="#6C63FF"/>
+            <rect x="4.75" y="2" width="2.5" height="9" rx="1" fill="#6C63FF"/>
+            <rect x="8.5"  y="7" width="2.5" height="4" rx="1" fill="#6C63FF"/>
+          </svg>
+        </div>
+        Leaderboard
+        <span class="lb-mode-label">${isSupabaseReady() ? '· global · all players' : '· this device only'}</span>
+      </div>
+      <div id="lb-body">
+        <div class="lb-status">
+          <div class="lb-spinner"></div>
+          Loading scores...
+        </div>
+      </div>
+    </div>
+    <div class="restart-wrap">
+      <button class="btn-ghost" onclick="navGoQuiz()">Take the quiz →</button>
+    </div>`;
+
+  let lb;
+  if (isSupabaseReady()) {
+    lb = await supabaseLoad();
+  }
+  if (!lb || lb.length === 0) {
+    lb = localLoad();
+  }
+
+  renderLeaderboardTable(lb, null, isSupabaseReady());
+}
 /* ── Tier definitions ───────────────────────────────────────── */
 function getTier(pct) {
   if (pct <= 25) return {
