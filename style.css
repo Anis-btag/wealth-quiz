@@ -54,7 +54,68 @@ body {
   border-radius: 24px;
   overflow: hidden;
 }
+.app-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1.1rem;
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 16px 16px 0 0;
+  border-bottom: none;
+}
 
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Sora', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--p-dark);
+}
+
+.nav-brand-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--p);
+}
+
+.nav-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-2);
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.15s;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  border-color: var(--p);
+  background: var(--p-light);
+  color: var(--p-dark);
+}
+
+/* Also update .outer to connect seamlessly with the navbar */
+.outer {
+  border-radius: 0 0 24px 24px;
+  border-top: none;
+}
 /* ============================================================
    SETUP SCREEN
    ============================================================ */
