@@ -10,47 +10,37 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div id="app-wrap" style="width:100%;max-width:600px;margin:0 auto;padding:1.5rem 1rem 0;">
-  <nav class="app-navbar" id="app-nav">
-    <div class="nav-brand">
-      <div class="nav-brand-dot"></div>
-      Wealth Mindset Quiz
-    </div>
-    <div class="nav-actions">
-      <button class="nav-btn" id="nav-lb-btn" onclick="navGoLeaderboard()">
-        <!-- bar chart icon -->
-        <svg viewBox="0 0 14 14" width="13" height="13" fill="none">
-          <rect x="1" y="6" width="3" height="7" rx="1" fill="currentColor"/>
-          <rect x="5.5" y="3" width="3" height="10" rx="1" fill="currentColor"/>
-          <rect x="10" y="8" width="3" height="5" rx="1" fill="currentColor"/>
-        </svg>
-        Leaderboard
-      </button>
-      <button class="nav-btn" id="nav-quiz-btn" onclick="navGoQuiz()">
-        <!-- checkmark icon -->
-        <svg viewBox="0 0 14 14" width="13" height="13" fill="none">
-          <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M4.5 7l2 2L10 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        Take Quiz
-      </button>
-    </div>
-  </nav>
-  <div id="shell">
-    <div class="outer" id="outer">
-      <div id="main"></div>
-    </div>
-  </div>
-</div>
-  <div id="shell">
-    <div class="outer" id="outer">
-      <!-- All screens are injected here by JavaScript -->
-      <div id="main"></div>
+  <div id="app-wrap">
+    <nav class="app-navbar" id="app-nav">
+      <div class="nav-brand">
+        <div class="nav-brand-dot"></div>
+        Wealth Mindset Quiz
+      </div>
+      <div class="nav-actions">
+        <button class="nav-btn" id="nav-lb-btn" onclick="navGoLeaderboard()">
+          <svg viewBox="0 0 14 14" width="13" height="13" fill="none">
+            <rect x="1" y="6" width="3" height="7" rx="1" fill="currentColor"/>
+            <rect x="5.5" y="3" width="3" height="10" rx="1" fill="currentColor"/>
+            <rect x="10" y="8" width="3" height="5" rx="1" fill="currentColor"/>
+          </svg>
+          Leaderboard
+        </button>
+        <button class="nav-btn" id="nav-quiz-btn" onclick="navGoQuiz()">
+          <svg viewBox="0 0 14 14" width="13" height="13" fill="none">
+            <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M4.5 7l2 2L10 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Take Quiz
+        </button>
+      </div>
+    </nav>
+    <div id="shell">
+      <div class="outer" id="outer">
+        <div id="main"></div>
+      </div>
     </div>
   </div>
-
   <script src="supabase.js"></script>
   <script src="app.js"></script>
-
 </body>
 </html>
