@@ -13,7 +13,12 @@ html, body {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
-
+#app-wrap {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 0;
+}
 :root {
   --p:          #5B4FE8;
   --p-light:    #EEEAFF;
